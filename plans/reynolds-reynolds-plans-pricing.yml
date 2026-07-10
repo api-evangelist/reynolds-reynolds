@@ -1,0 +1,85 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Reynolds and Reynolds
+providerId: reynolds-reynolds
+created: '2026-07-10'
+modified: '2026-07-10'
+reconciled: false
+tags:
+- Automotive
+- DMS
+- Reynolds Certified Interface
+- RCI
+- Gated Access
+- Plans
+description: >-
+  Reynolds and Reynolds has no public, self-serve, or usage-based API pricing.
+  Programmatic access to a dealer's Reynolds DMS is only available through the
+  Reynolds Certified Interface (RCI) program, which is contract-based and
+  gated by a certification process run by Reynolds Data Management. Terms and
+  fees are governed by NDA and negotiated per partner; they are not published.
+  Publicly reported (and dated) figures suggest a substantial one-time
+  certification/participation fee plus recurring per-dealer ("rooftop") data
+  fees - one forum account referenced a figure around $70K back in 2007, with
+  the observation that participation is hard to justify below roughly 100
+  rooftops. These figures are anecdotal, old, and under NDA; treat them as
+  directional only. There is no free tier and no online sign-up.
+notes: >-
+  All plan entries below are honest placeholders reflecting a gated,
+  contact-sales, NDA-covered commercial model. No per-unit rates are reconciled
+  because Reynolds does not publish them. Contact Reynolds Data Management for
+  current RCI terms.
+sources:
+- https://www.reyrey.com/partners/reynolds-certified-interface
+- https://www.reyrey.com/company/reynolds-data-management
+- https://forum.dealerrefresh.com/threads/rci-with-reynolds.1149/
+plans:
+- id: reynolds-rci-certification
+  name: Reynolds Certified Interface (RCI) - Certification
+  type: enterprise
+  description: >-
+    Required certification to become an approved RCI participant. Involves an
+    application, technical/security review, and contract execution under NDA.
+    Publicly reported as a multi-month process with a substantial one-time fee.
+    Exact terms are not published.
+  entries:
+  - label: Certification / Participation Fee
+    name: rci_certification_fee
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales (NDA; not published)
+    userMultiplied: false
+  elements:
+  - name: RCI Certification
+  - name: Security and Technical Review
+  - name: Secured Real-Time Bi-Directional Interface
+- id: reynolds-rci-per-rooftop
+  name: RCI Per-Dealer (Rooftop) Data Fees
+  type: enterprise
+  description: >-
+    Recurring data-interface fees charged per participating dealership
+    (rooftop) for the certified interface to that dealer's Reynolds DMS.
+    Amounts are negotiated and NDA-covered; not published.
+  entries:
+  - label: Per-Rooftop Interface Fee
+    name: rci_per_rooftop_fee
+    type: flat
+    metric: rooftop
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: contact sales (NDA; not published)
+    userMultiplied: true
+  elements:
+  - name: Per-Dealer Data Interface
+  - name: Real-Time Read and Write-Back
+  - name: Reynolds Support and Supportability
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

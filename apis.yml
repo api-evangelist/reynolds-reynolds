@@ -1,0 +1,173 @@
+aid: reynolds-reynolds
+url: https://raw.githubusercontent.com/api-evangelist/reynolds-reynolds/refs/heads/main/apis.yml
+name: Reynolds and Reynolds
+kind: company
+description: >-
+  Reynolds and Reynolds is one of the automotive industry's largest Dealership
+  Management System (DMS) providers, running the ERA-IGNITE and POWER platforms
+  that operate the core of thousands of franchised car dealerships - sales and
+  desking, F&I, service and repair orders, parts inventory, CRM, and dealership
+  accounting. Reynolds does NOT publish an open, self-serve developer API. All
+  programmatic access to DMS data flows through the Reynolds Certified Interface
+  (RCI) program, a certification-gated, contract-and-NDA partner program run by
+  Reynolds Data Management. RCI provides secured, real-time, bi-directional
+  interfaces so certified third parties can read from and write back to a
+  dealer's Reynolds DMS. There is no public developer portal, no public API
+  reference, and no published OpenAPI. The APIs below are logical groupings of
+  the DMS data domains exposed through RCI; endpoints are modeled, not sourced
+  from public documentation.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Automotive
+- Dealership Management System
+- DMS
+- Reynolds Certified Interface
+- RCI
+- Certified Interface
+- Partner API
+- Gated Access
+created: '2026-07-10'
+modified: '2026-07-10'
+specificationVersion: '0.19'
+apis:
+- aid: reynolds-reynolds:reynolds-reynolds-dms-customer-data-api
+  name: Reynolds DMS Customer Data API
+  tags:
+  - Customers
+  - Prospects
+  - CRM
+  - RCI
+  - Endpoints Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.reyrey.com/partners/reynolds-certified-interface
+  endpointsModeled: true
+  access: certified-partner
+  properties:
+  - url: https://www.reyrey.com/partners/reynolds-certified-interface
+    type: Documentation
+  - url: https://www.reyrey.com/company/reynolds-data-management
+    type: SignUp
+  description: >-
+    Access to dealership customer and prospect records held in the Reynolds
+    ERA-IGNITE / POWER DMS - contact details, ownership history, and marketing
+    consent - read and (per certification scope) written back through the RCI
+    program. No public base URL, endpoints, or authentication scheme is
+    documented; connectivity is provisioned per certified partner. Endpoints
+    are modeled, not sourced.
+- aid: reynolds-reynolds:reynolds-reynolds-vehicle-inventory-api
+  name: Reynolds Vehicle Inventory API
+  tags:
+  - Vehicles
+  - Inventory
+  - VIN
+  - RCI
+  - Endpoints Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.reyrey.com/partners/reynolds-certified-interface
+  endpointsModeled: true
+  access: certified-partner
+  properties:
+  - url: https://www.reyrey.com/partners/reynolds-certified-interface
+    type: Documentation
+  description: >-
+    New and used vehicle inventory in the Reynolds DMS - VINs, stock numbers,
+    pricing, and status - available to certified partners for read and pricing
+    write-back (the "DMS writeback" pattern used by inventory and merchandising
+    vendors). Gated behind RCI certification; endpoints are modeled, not sourced.
+- aid: reynolds-reynolds:reynolds-reynolds-sales-deals-fi-api
+  name: Reynolds Sales, Deals and F&I API
+  tags:
+  - Sales
+  - Deals
+  - Desking
+  - F&I
+  - RCI
+  - Endpoints Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.reyrey.com/partners/reynolds-certified-interface
+  endpointsModeled: true
+  access: certified-partner
+  properties:
+  - url: https://www.reyrey.com/partners/reynolds-certified-interface
+    type: Documentation
+  description: >-
+    Retail and lease deal, desking, and Finance and Insurance (F&I) data in the
+    Reynolds DMS - deal structures, lender submissions, and F&I products - for
+    certified partners to read and, where authorized, create or update deals.
+    Gated behind RCI certification; endpoints are modeled, not sourced.
+- aid: reynolds-reynolds:reynolds-reynolds-service-repair-orders-api
+  name: Reynolds Service and Repair Orders API
+  tags:
+  - Service
+  - Repair Orders
+  - Appointments
+  - Fixed Ops
+  - RCI
+  - Endpoints Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.reyrey.com/partners/reynolds-certified-interface
+  endpointsModeled: true
+  access: certified-partner
+  properties:
+  - url: https://www.reyrey.com/partners/reynolds-certified-interface
+    type: Documentation
+  description: >-
+    Service department data - repair orders, labor operations, and appointments -
+    in the Reynolds DMS. Certified service and scheduling partners push
+    appointments into the DMS and pull DMS appointments and repair orders in
+    real time. Gated behind RCI certification; endpoints are modeled, not sourced.
+- aid: reynolds-reynolds:reynolds-reynolds-parts-inventory-api
+  name: Reynolds Parts Inventory API
+  tags:
+  - Parts
+  - Inventory
+  - Purchase Orders
+  - RCI
+  - Endpoints Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.reyrey.com/partners/reynolds-certified-interface
+  endpointsModeled: true
+  access: certified-partner
+  properties:
+  - url: https://www.reyrey.com/partners/reynolds-certified-interface
+    type: Documentation
+  description: >-
+    Parts department data in the Reynolds DMS - on-hand quantities, pricing,
+    purchase orders, and suppliers - for certified parts, catalog, and
+    e-commerce partners. Gated behind RCI certification; endpoints are modeled,
+    not sourced.
+- aid: reynolds-reynolds:reynolds-reynolds-accounting-api
+  name: Reynolds Accounting API
+  tags:
+  - Accounting
+  - General Ledger
+  - AR
+  - AP
+  - RCI
+  - Endpoints Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.reyrey.com/partners/reynolds-certified-interface
+  endpointsModeled: true
+  access: certified-partner
+  properties:
+  - url: https://www.reyrey.com/partners/reynolds-certified-interface
+    type: Documentation
+  description: >-
+    Dealership accounting data in the Reynolds DMS - general ledger entries,
+    accounts receivable and payable, cash receipts, and postings - exposed to
+    certified accounting, reconciliation, and reporting partners. Gated behind
+    RCI certification; endpoints are modeled, not sourced.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/reynolds-and-reynolds
+- type: Website
+  url: https://www.reyrey.com
+- type: Documentation
+  url: https://www.reyrey.com/partners/reynolds-certified-interface
+- type: SignUp
+  url: https://www.reyrey.com/company/reynolds-data-management
+- type: Plans
+  url: plans/reynolds-reynolds-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

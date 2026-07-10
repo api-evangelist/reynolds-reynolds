@@ -1,0 +1,90 @@
+aid: reynolds-reynolds
+name: Reynolds and Reynolds
+review:
+  question: Does Reynolds and Reynolds expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-10'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Reynolds and Reynolds does not publish a
+    public API of any kind - REST or WebSocket - so there is no documented
+    public server-push transport to model. All programmatic access runs through
+    the certification-gated Reynolds Certified Interface (RCI) program, whose
+    technical interface specifications are private, contract-and-NDA bound, and
+    provisioned per certified partner. RCI is described publicly as delivering
+    "real-time, bi-directional" data movement, but the underlying transport is
+    not publicly documented as a WebSocket, and historically has been
+    request/response (e.g., XML over HTTP POST to a dealer-side ERA server).
+    There is nothing public to author an AsyncAPI against.
+findings:
+  summary: |
+    Reynolds and Reynolds does not publish a documented public WebSocket API,
+    nor any open, self-serve developer API. Reynolds is one of the largest
+    automotive Dealership Management System (DMS) vendors, running the
+    ERA-IGNITE and POWER platforms. The only sanctioned path to DMS data is the
+    Reynolds Certified Interface (RCI) program, operated by Reynolds Data
+    Management since 2005. RCI is certification-gated: a third party must apply,
+    pass a technical and security review, execute a contract under NDA, and pay
+    substantial (undisclosed) certification and per-dealer fees before receiving
+    a secured, real-time, bi-directional interface to a dealer's Reynolds DMS.
+    There is no public developer portal, no public API reference, no published
+    OpenAPI, and no public base URL or authentication scheme. No realtime,
+    bidirectional WebSocket (ws:// or wss://) endpoint is documented publicly.
+  openSource: |
+    Nothing about Reynolds' DMS or the RCI interface is open source. RCI
+    interface specifications are confidential and released only to certified
+    partners under NDA.
+  accessModel: |
+    Gated / certification-only partner program (Reynolds Certified Interface,
+    RCI). Access requires application, certification, contract, and NDA through
+    Reynolds Data Management. Publicly reported figures are anecdotal and dated:
+    a ~$70K figure was cited on a dealer forum circa 2007, with the note that
+    participation is hard to justify below roughly 100 rooftops, plus recurring
+    per-rooftop data fees. Exact current terms are not published.
+  transports:
+    - protocol: RCI Certified Interface
+      scheme: https
+      documented: false
+      note: Secured, real-time, bi-directional data interface to a dealer's Reynolds DMS. Specification is private and provisioned per certified partner. Publicly marketed as real-time and bi-directional; underlying transport not publicly documented.
+    - protocol: HTTP POST (historical)
+      scheme: http
+      documented: false
+      note: Older third-party integrations posted XML requests to a dealer-side ERA server (e.g., port 8100) and received XML responses. Not a public or supported interface.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Reynolds' public materials as of the review date.
+  endpointsModeled:
+    note: |
+      The API groupings in apis.yml (Customer Data, Vehicle Inventory, Sales /
+      Deals / F&I, Service and Repair Orders, Parts Inventory, Accounting) are
+      logical DMS data domains reached through RCI. They are MODELED from the
+      DMS's functional areas and third-party integration descriptions - they are
+      NOT sourced from any public Reynolds API reference, and no concrete
+      endpoint paths, base URLs, or auth schemes are asserted as public.
+sources:
+  - url: https://www.reyrey.com/partners/reynolds-certified-interface
+    type: Documentation
+    note: Reynolds Certified Interface (RCI) program overview. Certification-gated, secure, real-time bi-directional data movement. No public API reference.
+  - url: https://www.reyrey.com/company/reynolds-data-management
+    type: Documentation
+    note: Reynolds Data Management - the arm governing dealership data exchange and RCI.
+  - url: https://www.reyrey.com/partners/reynolds-certified-interface/rci-third-party-list
+    type: Documentation
+    note: Public list of certified RCI third-party vendors - evidence of a partner-only, certification model rather than open API.
+  - url: https://forum.dealerrefresh.com/threads/rci-with-reynolds.1149/
+    type: Forum
+    note: Dealer/vendor discussion of RCI cost (~$70K circa 2007), NDA secrecy, multi-month certification queue, and rooftop-count economics.
+  - url: https://supergood.ai/docs/reynolds-and-reynolds-api
+    type: ThirdParty
+    note: A third-party managed/unofficial API wrapper, explicitly positioned for cases where official Reynolds access is gated, partner-only, or unavailable. Confirms there is no official public API.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public WebSocket (or any public) API surface exists to model. Reynolds
+    and Reynolds gates all DMS access behind the certification-only,
+    NDA-covered RCI partner program. The entry documents this access model
+    honestly, marks the logical APIs as endpointsModeled, and does not
+    fabricate a public endpoint surface. No AsyncAPI document was created.
