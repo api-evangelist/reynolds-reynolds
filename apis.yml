@@ -158,6 +158,8 @@ apis:
     certified accounting, reconciliation, and reporting partners. Gated behind
     RCI certification; endpoints are modeled, not sourced.
 common:
+- type: DomainSecurity
+  url: security/reynolds-reynolds-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/reynolds-and-reynolds
 - type: Website
