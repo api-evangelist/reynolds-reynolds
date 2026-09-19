@@ -121,6 +121,13 @@ apis:
 - aid: reynolds-reynolds:reynolds-reynolds-service-repair-orders-api
   name: Reynolds Service and Repair Orders API
   tags:
+  - Services
+  - Repair Orders
+  - Appointments
+  - Fixed Ops
+  - RCI
+  - Endpoints Modeled
+  tags_raw:
   - Service
   - Repair Orders
   - Appointments
