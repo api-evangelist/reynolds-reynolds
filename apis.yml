@@ -50,7 +50,7 @@ tags:
 - Partner API
 - Gated Access
 created: '2026-07-10'
-modified: '2026-07-10'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: reynolds-reynolds:reynolds-reynolds-dms-customer-data-api
@@ -188,6 +188,8 @@ apis:
     certified accounting, reconciliation, and reporting partners. Gated behind
     RCI certification; endpoints are modeled, not sourced.
 common:
+- url: https://www.reyrey.com/resources/blog
+  type: Blog
 - type: DomainSecurity
   url: security/reynolds-reynolds-domain-security.yml
 - type: LinkedIn
