@@ -171,6 +171,13 @@ apis:
   tags:
   - Accounting
   - General Ledger
+  - Augmented Reality
+  - AP
+  - RCI
+  - Endpoints Modeled
+  tags_raw:
+  - Accounting
+  - General Ledger
   - AR
   - AP
   - RCI
